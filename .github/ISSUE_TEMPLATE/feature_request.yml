@@ -1,0 +1,18 @@
+name: Feature Request
+description: Suggest an enhancement or new Charles Schwab MCP capability
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / Use Case
+      description: What workflow or capability would this unlock?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the desired API, tool, auth flow, or risk guardrail.
+    validations:
+      required: true

@@ -1,0 +1,23 @@
+name: Release to PyPI
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/schwab-mcp
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Build distributions
+        run: uv build
+      - name: Publish package to PyPI (Trusted Publishing)
+        uses: pypa/gh-action-pypi-publish@release/v1

@@ -1,0 +1,33 @@
+# Environment & secrets
+.env
+.env.*
+!.env.example
+token.json
+oauth_state.json
+*.pem
+*.key
+*.crt
+
+# Local runtime data & audit logs
+data/
+*.jsonl
+
+# Python & tooling
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# OS & Editors
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
